@@ -24,6 +24,7 @@ use yiicod\easyimage\tools\Watermark;
  * Easy image extension
  *
  * @author Virchenko Maksim <muslim1992@gmail.com>
+ *
  * @package yiicod\easyimage
  */
 class EasyImage extends Component
@@ -113,6 +114,7 @@ class EasyImage extends Component
 
     /**
      * Returns the `Imagine` object that supports various image manipulations.
+     *
      * @return ImagineInterface the `Imagine` object
      */
     public static function getImagine(): ImagineInterface
@@ -125,7 +127,7 @@ class EasyImage extends Component
     }
 
     /**
-     * @param ImagineInterface $imagine the `Imagine` object.
+     * @param ImagineInterface $imagine the `Imagine` object
      */
     public static function setImagine(ImagineInterface $imagine)
     {
@@ -134,7 +136,9 @@ class EasyImage extends Component
 
     /**
      * Creates an `Imagine` object based on the specified [[driver]].
+     *
      * @return ImagineInterface the new `Imagine` object
+     *
      * @throws Exception
      */
     protected static function createImagine(): ImagineInterface
@@ -160,7 +164,7 @@ class EasyImage extends Component
                     throw new Exception("Unknown driver: $driver");
             }
         }
-        throw new Exception("Your system does not support any of these drivers: " . implode(',', (array)static::$driver));
+        throw new Exception('Your system does not support any of these drivers: ' . implode(',', (array)static::$driver));
     }
 
     /**
@@ -280,7 +284,7 @@ class EasyImage extends Component
     {
         $hash = md5($file . serialize($params));
 
-        $cacheFolderPath = $this->cachePath . $hash{0};
+        $cacheFolderPath = $this->cachePath . $hash[0];
 
         $cacheFileExt = isset($params['type']) ? $params['type'] : pathinfo($file, PATHINFO_EXTENSION);
         $cacheFileName = $hash . '.' . $cacheFileExt;

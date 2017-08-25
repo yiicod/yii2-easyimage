@@ -1,7 +1,7 @@
-Easyimage
-=================================
+EasyImage extension (PSR-4) (Yii 2)
+===================================
 You don't need to create many types of thumbnails for images in your project.
-You can create a thumbnail directly in the `View`. Thumbnail will automatically cached. It's easy and powerful!
+You can create a thumbnail directly in the `View`. Thumbnail will automatically cached. It's easy!
   
 Features:
 - Easy to use
@@ -10,8 +10,6 @@ Features:
 - Cache sorting to subdirectories
 
 ###Installing and configuring
-Extract the `EasyImage` folder under `vendor\yiicod`
-
 Add the following to your config file `components` section:
 
 ```php
@@ -27,12 +25,14 @@ Add the following to your config file `components` section:
 ####Parameters
 - string `webrootAlias` webroot folder path
 - string `cachePath` cache directory path in webroot folder
-- array `imageOptions` array with default output image options which will used to save image
+- array `imageOptions` array with default output image options which will used by Imagine to save image
 
 ##Usage
 ```php
-Yii::$app->easyimage->getUrl($file, $params = [], $absolute = false); //Get cached image url
-Yii::$app->easyimage->getPath($file, $params = []); //Get cached image path
+Yii::$app->easyimage->getUrl($file, $params, $absolute); //Get cached image url
+Yii::$app->easyimage->getPath($file, $params); //Get cached image path
+
+Note: you can get access to the component using static method EasyImage::getInstance()
 ```
 
 ####Parameters
@@ -49,7 +49,7 @@ Yii::$app->easyimage->getPath($file, $params = []); //Get cached image path
     'offset_y' => 100,
 ],
 'flip' => [
-    'axis' => 'vertical', //Required, available 'vertical' or 'horizontal'
+    'axis' => 'vertical', //Required available 'vertical' or 'horizontal'
 ],
 'resize' => [
     'width' => 200, //Required

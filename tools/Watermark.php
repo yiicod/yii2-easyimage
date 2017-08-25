@@ -3,7 +3,6 @@
 namespace yiicod\easyimage\tools;
 
 use Exception;
-use Imagine\Image\ImageInterface;
 use Imagine\Image\ManipulatorInterface;
 use Imagine\Image\Point;
 use yiicod\easyimage\base\ToolInterface;
@@ -14,6 +13,7 @@ use yiicod\easyimage\EasyImage;
  * Watermark image tool
  *
  * @author Virchenko Maksim <muslim1992@gmail.com>
+ *
  * @package yiicod\easyimage\tools
  */
 class Watermark implements ToolInterface
@@ -25,9 +25,10 @@ class Watermark implements ToolInterface
      * @param array $params
      *
      * @return ManipulatorInterface
+     *
      * @throws Exception
      */
-    public static function handle(ManipulatorInterface $image, array $params = []) : ManipulatorInterface
+    public static function handle(ManipulatorInterface $image, array $params = []): ManipulatorInterface
     {
         if (false === isset($params['image'])) {
             throw new Exception('Param "image" is required for action "Watermark"');

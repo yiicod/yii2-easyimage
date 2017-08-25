@@ -13,6 +13,7 @@ use yiicod\easyimage\base\ToolInterface;
  * Crop tool
  *
  * @author Virchenko Maksim <muslim1992@gmail.com>
+ *
  * @package yiicod\easyimage\tools
  */
 class Crop implements ToolInterface
@@ -24,6 +25,7 @@ class Crop implements ToolInterface
      * @param array $params
      *
      * @return ManipulatorInterface
+     *
      * @throws Exception
      */
     public static function handle(ManipulatorInterface $image, array $params = []): ManipulatorInterface

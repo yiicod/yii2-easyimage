@@ -11,6 +11,7 @@ use yiicod\easyimage\base\ToolInterface;
  * Flip image tool
  *
  * @author Virchenko Maksim <muslim1992@gmail.com>
+ *
  * @package yiicod\easyimage\tools
  */
 class Flip implements ToolInterface
@@ -22,9 +23,10 @@ class Flip implements ToolInterface
      * @param array $params
      *
      * @return ManipulatorInterface
+     *
      * @throws Exception
      */
-    public static function handle(ManipulatorInterface $image, array $params = []) : ManipulatorInterface
+    public static function handle(ManipulatorInterface $image, array $params = []): ManipulatorInterface
     {
         if (false === isset($params['axis'])) {
             throw new Exception('Param "axis" is required for action "Flip"');

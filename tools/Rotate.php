@@ -12,6 +12,7 @@ use yiicod\easyimage\base\ToolInterface;
  * Rotate image tool
  *
  * @author Virchenko Maksim <muslim1992@gmail.com>
+ *
  * @package yiicod\easyimage\tools
  */
 class Rotate implements ToolInterface
@@ -23,9 +24,10 @@ class Rotate implements ToolInterface
      * @param array $params
      *
      * @return ManipulatorInterface
+     *
      * @throws Exception
      */
-    public static function handle(ManipulatorInterface $image, array $params = []) : ManipulatorInterface
+    public static function handle(ManipulatorInterface $image, array $params = []): ManipulatorInterface
     {
         if (false === isset($params['angle'])) {
             throw new Exception('Param "angle" is required for action "Rotate"');

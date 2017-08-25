@@ -1,10 +1,10 @@
 {
     "name": "yiicod/yii2-easyimage",
-    "description": "Yii Framework extension for easy creating and caching thumbnails on real time.",
+    "description": "Yii 2 Framework extension for easy creating and caching thumbnails in real time.",
     "keywords": ["yii", "extension", "image", "thumbnail", "cache", "realtime"],
-    "homepage": "https://github.com/yii-ext/yii-easyimage",
+    "homepage": "https://github.com/yiicod/yii2-easyimage",
     "type": "yii2-extension",
-    "license": "New BSD",
+    "license": "New BSD license",
     "authors": [
         {
     	    "name": "Alexey Orlov",
@@ -15,10 +15,9 @@
             "email": "muslim1992@gmail.com"
         }
     ],
-    "minimum-stability": "dev",
     "require": {
         "yiisoft/yii2": "*",
-        "imagine/imagine": "0.5.*"
+        "imagine/imagine": "~0.6.0"
     },
     "autoload": {
         "psr-4": {

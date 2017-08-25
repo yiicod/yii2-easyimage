@@ -9,6 +9,7 @@ use Imagine\Image\ManipulatorInterface;
  * Base interface for easyimage tools
  *
  * @author Virchenko Maksim <muslim1992@gmail.com>
+ *
  * @package yiicod\easyimage\base
  */
 interface ToolInterface
@@ -21,5 +22,5 @@ interface ToolInterface
      *
      * @return ManipulatorInterface
      */
-    public static function handle(ManipulatorInterface $image, array $params = []) : ManipulatorInterface;
+    public static function handle(ManipulatorInterface $image, array $params = []): ManipulatorInterface;
 }

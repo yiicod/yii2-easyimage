@@ -14,6 +14,7 @@ use yiicod\easyimage\base\ToolInterface;
  * Thumbnail image tool
  *
  * @author Virchenko Maksim <muslim1992@gmail.com>
+ *
  * @package yiicod\easyimage\tools
  */
 class Thumbnail implements ToolInterface
@@ -25,6 +26,7 @@ class Thumbnail implements ToolInterface
      * @param array $params
      *
      * @return ManipulatorInterface
+     *
      * @throws Exception
      */
     public static function handle(ManipulatorInterface $image, array $params = []): ManipulatorInterface
@@ -45,8 +47,8 @@ class Thumbnail implements ToolInterface
 
             $image->resize($newSize);
             $result = $image->crop(new Point(
-                round(($newSize->getWidth() - $params['width']) / 2),
-                round(($newSize->getHeight() - $params['height']) / 2)
+                max(0, round(($newSize->getWidth() - $params['width']) / 2)),
+                max(0, round(($newSize->getHeight() - $params['height']) / 2))
             ), new Box($params['width'], $params['height']));
         } elseif (isset($params['width'])) {
             $result = $image->resize($size->widen($params['width']));
