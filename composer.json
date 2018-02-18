@@ -4,7 +4,7 @@
     "keywords": ["yii", "extension", "image", "thumbnail", "cache", "realtime"],
     "homepage": "https://github.com/yiicod/yii2-easyimage",
     "type": "yii2-extension",
-    "license": "New BSD license",
+    "license": "MIT",
     "authors": [
         {
     	    "name": "Alexey Orlov",
@@ -16,9 +16,18 @@
         }
     ],
     "require": {
-        "yiisoft/yii2": "*",
+        "yiisoft/yii2": "2.*",
         "imagine/imagine": "~0.6.0"
     },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "~2.1"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
     "autoload": {
         "psr-4": {
             "yiicod\\easyimage\\": "/"
