@@ -119,7 +119,7 @@ class EasyImage extends Component
      */
     public static function getImagine(): ImagineInterface
     {
-        if (self::$imagine === null) {
+        if (null === self::$imagine) {
             self::$imagine = static::createImagine();
         }
 
